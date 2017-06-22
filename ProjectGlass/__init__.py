@@ -16,8 +16,8 @@ def getDataSet(fp):
             dataset = pd.read_csv(fp)
             return dataset
 
-        except Exception :
-            print(Exception)
+        except Exception as e:
+            print(e)
 
     # get data for .xls file
     elif (fileExt == '.xls' or fileExt == '.xlsx'):
@@ -27,8 +27,8 @@ def getDataSet(fp):
             dataset = pd.read_excel(fp)
             return dataset
 
-        except Exception:
-            print(Exception)
+        except Exception as e:
+            print(e)
 
     # get data for json file
     elif (fileExt == '.json'):
@@ -38,8 +38,8 @@ def getDataSet(fp):
             dataset = pd.read_json(fp)
             return dataset
 
-        except Exception:
-            print(Exception)
+        except Exception as e:
+            print(e)
 
     else:
         print('File format not supported')
